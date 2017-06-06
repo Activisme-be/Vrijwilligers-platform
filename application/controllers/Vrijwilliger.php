@@ -1,7 +1,15 @@
-<?php defined('BASEPATH') or exit('No direct script access allowed'); 
+<?php defined('BASEPATH') or exit('No direct script access allowed');
 
+/**
+ * Class Vrijwilliger
+ */
 class Vrijwilliger extends CI_Controller 
 {
+	/**
+	 * Vrijwilliger constructor.
+	 *
+	 * @return void.
+	 */
     public function __construct() 
     {
         parent::__construct(); 
@@ -10,6 +18,11 @@ class Vrijwilliger extends CI_Controller
         $this->load->helper(['url']);  
     }
 
+	/**
+	 * Store a new volunteer in the system.
+	 *
+	 * @return mixed
+	 */
     public function store() 
     {
         $this->form_validation->set_rules('name', 'Naam', 'trim|required');
